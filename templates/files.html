@@ -7,21 +7,21 @@
 </head>
 <body class="bg-light">
 <div class="container py-5">
-    <h2>📂 All Uploaded Files</h2>
+    <h1 class="mb-4">📂 Encrypted Files</h1>
     {% if files %}
     <ul class="list-group">
         {% for file in files %}
         <li class="list-group-item d-flex justify-content-between align-items-center">
             {{ file }}
-            <a href="{{ url_for('download_file', filename=file) }}" class="btn btn-sm btn-success">Download</a>
+            <a href="{{ url_for('download_file', filename=file) }}" class="btn btn-sm btn-success">Download & Decrypt</a>
         </li>
         {% endfor %}
     </ul>
     {% else %}
     <p class="text-muted">No files available.</p>
     {% endif %}
-
-    <a href="{{ url_for('index') }}" class="btn btn-secondary mt-3">⬅ Back to Upload</a>
+    <br>
+    <a href="{{ url_for('index') }}" class="btn btn-secondary">⬅ Back</a>
 </div>
 </body>
 </html>
