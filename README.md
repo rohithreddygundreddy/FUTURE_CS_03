@@ -14,11 +14,15 @@ Files are **encrypted using AES-GCM** before storage to ensure **confidentiality
 
 ## Project Structure:
 file-portal/
-├── app.py             # Main Flask application
+├── app.py # Main Flask application
+|
 ├── secret.key         # AES key stored securely
+|
 ├── uploads/           # Encrypted files storage
+|
 └── templates/
 ├── index.html     # Upload form + file list
+|
 └── files.html     # Optional separate file list
 
 ## Screenshots
